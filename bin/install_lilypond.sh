@@ -10,6 +10,7 @@
 install_centos_rpm()
 {
     RPM=$1
+    cd $RUN_DIR
     curl -0 http://mirror.centos.org/centos/6/os/x86_64/Packages/$RPM > $RPM
     rpm2cpio $RPM | cpio -idmv
     rm $RPM
