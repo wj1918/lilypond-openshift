@@ -130,15 +130,24 @@ install_rpms()
 	install_centos_rpm freetype-devel-2.3.11-14.el6_3.1.x86_64.rpm
 	install_centos_rpm pango-devel-1.28.1-7.el6_3.x86_64.rpm
 
-	install_centos_rpm texlive-2007-57.el6_2.x86_64.rpm
-	install_centos_rpm texlive-afm-2007-57.el6_2.x86_64.rpm
-	install_centos_rpm texlive-context-2007-57.el6_2.x86_64.rpm
-	install_centos_rpm texlive-dvips-2007-57.el6_2.x86_64.rpm
-	install_centos_rpm texlive-dviutils-2007-57.el6_2.x86_64.rpm
-	install_centos_rpm texlive-east-asian-2007-57.el6_2.x86_64.rpm
-	install_centos_rpm texlive-latex-2007-57.el6_2.x86_64.rpm
-	install_centos_rpm texlive-utils-2007-57.el6_2.x86_64.rpm
-	install_centos_rpm texlive-xetex-2007-57.el6_2.x86_64.rpm
+    # install texlive
+        
+    install_centos_rpm texlive-texmf-errata-2007-7.1.el6.noarch.rpm
+    install_centos_rpm texlive-texmf-2007-38.el6.noarch.rpm
+    install_centos_rpm netpbm-10.47.05-11.el6.x86_64.rpm
+    install_centos_rpm netpbm-progs-10.47.05-11.el6.x86_64.rpm
+    install_centos_rpm texlive-texmf-errata-dvips-2007-7.1.el6.noarch.rpm
+    install_centos_rpm texlive-texmf-dvips-2007-38.el6.noarch.rpm
+    install_centos_rpm texlive-texmf-errata-latex-2007-7.1.el6.noarch.rpm
+    install_centos_rpm texlive-texmf-errata-fonts-2007-7.1.el6.noarch.rpm
+    install_centos_rpm texlive-texmf-fonts-2007-38.el6.noarch.rpm
+    install_centos_rpm texlive-2007-57.el6_2.x86_64.rpm
+    install_centos_rpm texlive-dvips-2007-57.el6_2.x86_64.rpm
+    install_centos_rpm texlive-utils-2007-57.el6_2.x86_64.rpm
+    install_centos_rpm texlive-texmf-latex-2007-38.el6.noarch.rpm
+    install_centos_rpm texlive-latex-2007-57.el6_2.x86_64.rpm
+    install_centos_rpm tex-preview-11.85-10.el6.noarch.rpm
+    
 } 
 
 
