@@ -33,6 +33,12 @@ fix_pkgconfig()
     cd ../../..
 }
 
+
+fix_texlive()
+{
+    sed -i 's/=\ \/usr/= $RUN_DIR\/usr/g;s/=\ \/var/= $RUN_DIR\/var/g;s/=\ \/etc/= $RUN_DIR\/etc/g;s/=\ \$HOME/= $RUN_DIR/g' $TEXMFCNF/texmf.cnf
+}
+
 install_libtool()
 {
     #build libtool
@@ -161,6 +167,9 @@ PKG_CONFIG_PATH=$RUN_DIR/usr/lib64/pkgconfig
 PATH=$RUN_DIR/usr/bin:$PATH
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$RUN_DIR/usr/lib64
 #export GUILE_LOAD_PATH=$RUN_DIR/usr/share/guile/1.8
+export TEXMFCNF=$RUN_DIR/usr/share/texmf/web2c
+
+fix_texlive
 
 install_libtool
 install_guile
