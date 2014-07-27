@@ -163,11 +163,15 @@ cleanup
 install_rpms
 fix_pkgconfig
 
-PKG_CONFIG_PATH=$RUN_DIR/usr/lib64/pkgconfig
-PATH=$RUN_DIR/usr/bin:$PATH
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$RUN_DIR/usr/lib64
-#export GUILE_LOAD_PATH=$RUN_DIR/usr/share/guile/1.8
+ORIGINAL_PATH=/var/lib/openshift/53cb39a94382ecf35700075f/python//virtenv/bin:/var/lib/openshift/53cb39a94382ecf35700075f/python//bin:/opt/rh/python27/root/usr/bin:/bin:/usr/bin:/usr/sbin
+export PKG_CONFIG_PATH=$RUN_DIR/usr/lib64/pkgconfig
+export PATH=$RUN_DIR/usr/bin:$ORIGINAL_PATH
+export LD_LIBRARY_PATH=/opt/rh/python27/root/usr/lib64:$RUN_DIR/usr/lib64:$RUN_DIR/usr/lib
+export MANPATH=/opt/rh/python27/root/usr/share/man:$RUN_DIR/usr/share/man
+export GUILE_LOAD_PATH=$RUN_DIR/usr/share/guile/1.8
 export TEXMFCNF=$RUN_DIR/usr/share/texmf/web2c
+export BISON_PKGDATADIR=$RUN_DIR/usr/share/bison
+export RUN_DIR
 
 fix_texlive
 
